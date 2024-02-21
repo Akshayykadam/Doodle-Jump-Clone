@@ -22,12 +22,6 @@ public class PlayerController : MonoBehaviour
         GamePlayManager.Instance.GameOverPanel.SetActive(false);
         rigidBody = GetComponent<Rigidbody2D>();
         Application.targetFrameRate = targetFramerate;
-        //if (SystemInfo.supportsAccelerometer)
-        //{
-        //    // Enable the gyroscope only on Android
-        //    Input.supportsAccelerometer.enabled = true;
-        //}
-
     }
 
     private void Update()
@@ -74,7 +68,6 @@ public class PlayerController : MonoBehaviour
             // Apply the smoothed and scaled accelerometer input to the player's velocity
             rigidBody.velocity = new Vector2(accelerometerInputSmoothed * speed * sensitivity, rigidBody.velocity.y);
         }
-
         else
         {
             //// For other platforms (including Unity Editor), use the previous input method (e.g., keyboard or touch)
