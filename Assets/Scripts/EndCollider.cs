@@ -30,7 +30,7 @@ public class EndCollider : MonoBehaviour
             {
                 // If the random number is 2, destroy the current platform and instantiate a broken platform //TODO
                 Destroy(collision.gameObject);
-                Instantiate(platformPrefab /*brokenPlatformPrefab*/, new Vector2(Random.Range(-1.5f, 1.5f), player.transform.position.y + (1 + Random.Range(0.5f, 1f))), Quaternion.identity);
+                Instantiate(/*platformPrefab*/ brokenPlatformPrefab, new Vector2(Random.Range(-1.5f, 1.5f), player.transform.position.y + (1 + Random.Range(0.5f, 1f))), Quaternion.identity);
             }
             else
             {
